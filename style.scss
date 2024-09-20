@@ -1,0 +1,214 @@
+$font: "Kodchasan", sans-serif;
+
+@mixin flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EFEEF3;
+}
+
+header {
+    //border: solid green;
+    height: 35vh;
+    width: 100vw;
+    //position: relative;
+}
+
+// INÍCIO HEADER -------------------------------
+.logo {
+    width: 9.5em;
+    //height: 5rem;
+    padding: 15px 10px;
+
+    @media (max-width: 500px) {
+        border: solid green;
+    }
+}
+
+.logo-links {
+    @include flexbox();
+    align-items: center;
+    height: 8vh;
+    background-color: #EFEEF3;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        width: 95vw;
+        height: 35vh;
+        align-items: center;
+        justify-content: center;
+        margin: 0 17%;
+        border: solid blue;
+        }
+}
+
+.navegacao {
+    //border: solid red;
+    @include flexbox();
+    font-family: $font;
+    width: 80vw;
+    font-size: 1.2em;
+    list-style: none;
+    padding: 0 5% 0 0;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+        border: solid red;
+        
+        li {
+            margin: 0.4em 0;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+    }
+}
+
+.position-modelos {
+    //border: solid blue;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    @media (max-width: 500px) {
+        display: none;
+        }
+}
+
+.modelos {
+    width: 100vw;
+    height: 14em;
+    padding: 0 0 5px 0;
+}
+// FIM HEADER -------------------------------
+
+main {
+    width: 100vw;
+}
+
+// INÍCIO SECTION-PRINCIPAL --------------------------
+section {
+    @include flexbox();
+    align-items: center;
+
+    @media (max-width: 500px) {
+        //flex-direction: column;
+        width: 95vw;
+    }
+}
+
+.principal {
+    //border: solid red;
+    height: 35vh;
+    padding: 15% 10% 13% 10%;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+        height: 100vh;
+        margin: 0% 17%;
+        
+        justify-content: center;
+        border: solid orange;
+    }
+
+    .produto-novo {
+        width: 25em;
+        height: 19em;
+        border-radius: 10px;
+
+        @media (max-width: 500px) {
+            width: 100vw;
+            height: 100%;
+            margin: 30% 0 10% 0;
+            border: solid black;
+        }
+    }
+
+    .elseve-glycolic {
+        width: 27em;
+        font-family: $font;
+        text-align: center;
+        font-size: 1em;
+
+        @media (max-width: 500px) {
+            width: 95vw;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+    }
+
+    p {
+        font-size: 1.1em;
+        padding: 1.1em 0;
+        font-weight: 450;
+    }
+}
+// FIM SECTION-PRINCIPAL --------------------------
+
+// INÍCIO SECTION -SECUNDÁRIA
+.secundaria {
+    //border: solid blue;
+    height: 30vh;
+    padding: 8% 10%;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        width: 95vw;
+        height: 37vh;
+        margin: 10% 17% 0 17%;
+        padding: 0;
+        border: solid pink;
+    }
+
+    h2 {
+        width: 15.5em;
+
+        @media (max-width: 500px) {
+            text-align: center;
+        }
+    }
+
+}
+
+.titulos {
+    font-family: $font;
+    font-weight: 500;
+
+    @media (max-width: 500px) {
+        font-size: 1.2em;
+        font-weight: 700;
+
+    }
+}
+
+.produtos {
+    //border: solid orange;
+    width: 53%;
+    height: 11em;
+    margin: 0 -3em 0 0;
+    @include flexbox();
+
+    @media (max-width: 500px) {
+        border: solid darkcyan;
+        width: 70vw;
+        margin: 0;
+        flex-wrap: wrap;
+        //flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+
